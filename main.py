@@ -17,8 +17,8 @@ def codeforces():
 		#if len(contests)!=0:
 		for item in contests:
 			file.write("Contest Name: ")
-			file.write(str(item['name']+"\n"))
-			file.write("Duration: "+str(item['durationSeconds']/(60*60))+" Hours\n")
+			file.write((item['name'].encode('utf8')+"\n"))
+			file.write("Duration: "+str((item['durationSeconds']/(60*60)))+" Hours\n")
 			file.write("Start time: "+ datetime.fromtimestamp(int(item['startTimeSeconds'])).strftime('%Y-%m-%d %H:%M:%S'))
 			file.write("\n\n")
 
